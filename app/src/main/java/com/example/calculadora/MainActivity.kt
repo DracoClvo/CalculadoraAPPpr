@@ -26,17 +26,37 @@ class MainActivity : AppCompatActivity() {
     fun empaquetar(add:Int,to:Int):Int{
         return to.times(10).plus(add)
     }
+    fun percent(V: View){
+        val ope = (V as Button).text.toString()
+        val ban = resultado.text.toString().equals("").not()
+        if(ban){
+            a = motor.action(ope, aux, b)
+
+        }else {
+            a = motor.action(ope,a,b)
+        }
+        resultado.setText(a.toString())
+    }
     fun operacion(V:View){
         val ope = (V as Button).text.toString()
         val ban = resultado.text.toString().equals("").not()
         if(ban){
-            a = aux
-            opeb = ope
-
+            b = aux
+            a = motor.action(opeb,a,b)
         }
+        opeb = ope
+        resultado2.setText("$a$opeb")
+        resultado.setText("")
+        println("a:$a op:$opeb b:$b")
     }
     fun equals(V:View){
-
+        val ope = (V as Button).text.toString()
+        val ban = resultado.text.toString().equals("").not()
+        if(ban){
+            a = motor.action(opeb,a,aux)
+        }
+        resultado2.setText("")
+        resultado.setText(a.toString())
     }
     fun Concatenar_numero(v:View){
         val num = (v as Button).text.toString().toInt()

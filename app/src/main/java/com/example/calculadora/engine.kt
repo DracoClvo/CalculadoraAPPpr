@@ -11,6 +11,7 @@ class engine{
         return a.div(b)
     }
     fun multi(a: Int,b: Int):Int{
+        println("a:$a times b:$b")
         return a.times(b)
     }
     fun percent(a:Int):Int{
@@ -21,7 +22,7 @@ class engine{
         when (selec){
             "+" -> result = suma(a,b)
             "-" -> result = resta(a,b)
-            "X" -> result = multi(a,b)
+            "x" -> result = multi(a,b)
             "/" -> result = div(a,b)
             "%" -> result = percent(a)
             ""  -> result = b

@@ -95,6 +95,7 @@
         android:id="@+id/percent"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:onClick="percent"
         android:text="@string/_percent"
         app:layout_constraintBottom_toTopOf="@+id/nine"
         app:layout_constraintStart_toEndOf="@+id/erase" />
