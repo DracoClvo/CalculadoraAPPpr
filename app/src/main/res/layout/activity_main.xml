@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/equal"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="equals"
+        android:text="@string/equals"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dot" />
+
+    <Button
+        android:id="@+id/seven"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        android:onClick="Concatenar_numero"
+        android:text="@string/_7"
+        app:layout_constraintBottom_toTopOf="@+id/four"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/four"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        android:onClick="Concatenar_numero"
+        android:text="@string/_4"
+        app:layout_constraintBottom_toTopOf="@+id/one"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="operacion"
+        android:text="@string/plus"
+        app:layout_constraintBottom_toTopOf="@+id/equal"
+        app:layout_constraintStart_toEndOf="@+id/three" />
+
+    <Button
+        android:id="@+id/times"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="operacion"
+        android:text="@string/_x"
+        app:layout_constraintBottom_toTopOf="@+id/minus"
+        app:layout_constraintStart_toEndOf="@+id/nine" />
+
+    <Button
+        android:id="@+id/dot"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/zero" />
+
+    <Button
+        android:id="@+id/nine"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="Concatenar_numero"
+        android:text="@string/_9"
+        app:layout_constraintBottom_toTopOf="@+id/six"
+        app:layout_constraintStart_toEndOf="@+id/eight" />
+
+    <Button
+        android:id="@+id/erase"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        android:onClick="borrar_fun"
+        android:text="@string/_borrar"
+        app:layout_constraintBottom_toTopOf="@+id/eight"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="operacion"
+        android:text="@string/_minus"
+        app:layout_constraintBottom_toTopOf="@+id/plus"
+        app:layout_constraintStart_toEndOf="@+id/six" />
+
+    <Button
+        android:id="@+id/percent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="@string/_percent"
+        app:layout_constraintBottom_toTopOf="@+id/nine"
+        app:layout_constraintStart_toEndOf="@+id/erase" />
+
+    <Button
+        android:id="@+id/div"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="operacion"
+        android:text="@string/_div"
+        app:layout_constraintBottom_toTopOf="@+id/times"
+        app:layout_constraintStart_toEndOf="@+id/percent" />
+
+    <Button
+        android:id="@+id/eight"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="Concatenar_numero"
+        android:text="@string/_8"
+        app:layout_constraintBottom_toTopOf="@+id/five"
+        app:layout_constraintStart_toEndOf="@+id/seven" />
+
+    <Button
+        android:id="@+id/five"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="Concatenar_numero"
+        android:text="@string/_5"
+        app:layout_constraintBottom_toTopOf="@+id/two"
+        app:layout_constraintStart_toEndOf="@+id/four" />
+
+    <Button
+        android:id="@+id/two"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="Concatenar_numero"
+        android:text="@string/_2"
+        app:layout_constraintBottom_toTopOf="@+id/zero"
+        app:layout_constraintStart_toEndOf="@+id/one" />
+
+    <Button
+        android:id="@+id/one"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        android:onClick="Concatenar_numero"
+        android:text="@string/_1"
+        app:layout_constraintBottom_toTopOf="@+id/clear"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/six"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="Concatenar_numero"
+        android:text="@string/_6"
+        app:layout_constraintBottom_toTopOf="@+id/three"
+        app:layout_constraintStart_toEndOf="@+id/five" />
+
+    <Button
+        android:id="@+id/three"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="Concatenar_numero"
+        android:text="@string/_3"
+        app:layout_constraintBottom_toTopOf="@+id/dot"
+        app:layout_constraintStart_toEndOf="@+id/two" />
+
+    <Button
+        android:id="@+id/zero"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="Concatenar_numero"
+        android:text="@string/_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clear" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/c"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="421dp"
+        android:layout_height="53dp"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/Resultado"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/erase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text=" " />
+
+    <TextView
+        android:id="@+id/resultado2"
+        android:layout_width="421dp"
+        android:layout_height="30dp"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/Resultado"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text=" " />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
